@@ -8,17 +8,18 @@ $tmp = array(
 		'description' => '',
 		'events' => array(
 			'OnDocFormSave' => array(),
-			'OnTempFormSave' => array(),
-			'OnTVFormSave' => array(),
-			'OnChunkFormSave' => array(),
-			'OnSnipFormSave' => array(),
-			'OnPluginFormSave' => array(),
+			'OnResourceDuplicate' => array(),
+			'OnTemplateSave' => array(),
+			'OnTemplateVarSave' => array(),
+			'OnChunkSave' => array(),
+			'OnSnippetSave' => array(),
+			'OnPluginSave' => array(),
 			'OnDocFormDelete' => array(),
 			'OnTempFormDelete' => array(),
 			'OnTVFormDelete' => array(),
 			'OnChunkFormDelete' => array(),
 			'OnSnipFormDelete' => array(),
-			'OnPluginFormDelete' => array(),
+			'OnPluginFormDelete' => array(), //OnResourceDuplicate
 		)
 	)
 );

@@ -10,19 +10,22 @@ switch ($modx->event->name) {
 	case 'OnDocFormSave':
 		$result = $changepack->addChangePackLog($resource, 'modResource', $mode);
         break;
-    case 'OnTempFormSave':
+	case 'OnResourceDuplicate':
+		$result = $changepack->addChangePackLog($newResource, 'modResource', 'new');
+        break;
+    case 'OnTemplateSave':
 		$result = $changepack->addChangePackLog($template, 'modTemplate', $mode);
         break;
-    case 'OnTVFormSave':
-		$result = $changepack->addChangePackLog($tv, 'modTemplateVar', $mode);
+    case 'OnTemplateVarSave':
+		$result = $changepack->addChangePackLog($templateVar, 'modTemplateVar', $mode);
         break;
-    case 'OnChunkFormSave':
+    case 'OnChunkSave':
 		$result = $changepack->addChangePackLog($chunk, 'modChunk', $mode);
         break;
-    case 'OnSnipFormSave':
+    case 'OnSnippetSave':
 		$result = $changepack->addChangePackLog($snippet, 'modSnippet', $mode);
         break;
-    case 'OnPluginFormSave':
+    case 'OnPluginSave':
 		$result = $changepack->addChangePackLog($plugin, 'modPlugin', $mode);
         break;
 	case 'OnDocFormDelete':
